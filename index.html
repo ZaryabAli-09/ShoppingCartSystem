@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PUMP WALK</title>
+    <link rel="shortcut icon" href="images/black.jpg" type="image/x-icon" />
+    <!-- link to css  -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- link to box icons  -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- navbar  -->
+
+    <nav class="nav-main">
+      <div class="nav-company-logo">PUMP WALK</div>
+      <div class="navlist">
+        <ul class="nav-ul">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#shop">Shop</a></li>
+        </ul>
+      </div>
+      <div class="cart-etc">
+        <i class="bx bx-shopping-bag" id="cart-icon"></i>
+        <div class="t-products-count">0</div>
+      </div>
+    </nav>
+    <!-- modal  -->
+
+    <!-- side cart modal  -->
+    <div class="side-cart">
+      <i class="bx bx-x" id="cart-close"></i>
+      <h2 class="side-cart-title">Your Cart</h2>
+      <div class="side-cart-content">
+        <!-- content here  -->
+      </div>
+      <div class="total">
+        <div class="total-title">Total</div>
+        <div class="total-price">$0</div>
+      </div>
+      <div class="buy-btn"><button class="buy-btn">Buy now</button></div>
+      <div class="msg-div hidden">
+        <i class="message-on-buy-btn">
+          Sorry we have not added payment method yet!!
+        </i>
+      </div>
+    </div>
+
+    <main>
+      <!-- home first look  -->
+      <div class="home" id="home">
+        <div class="home-text">
+          <h2>Footwear Collection 2023</h2>
+          <h1>The Pump Walk</h1>
+          <h3>New Season</h3>
+          <button class="btn shop-now-btn"><a href="#shop">Shop Now</a></button>
+        </div>
+        <img src="shoe/4.jpg" alt="" />
+      </div>
+      <div class="products-h2"><h2>Men All Shoes</h2></div>
+
+      <!-- products  -->
+      <div class="cart-products" id="shop">
+        <!-- boxes -->
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

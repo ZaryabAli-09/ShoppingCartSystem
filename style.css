@@ -1,0 +1,347 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: rgb(244, 246, 244);
+}
+/* navbar  */
+.nav-main {
+  display: flex;
+  align-items: center;
+  padding-block: 10px;
+  background-color: rgba(244, 246, 244, 0.827);
+  border: 1px solid rgb(232, 231, 235);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  height: 50px;
+  justify-content: space-between;
+}
+.nav-company-logo {
+  cursor: pointer;
+  padding-inline: 30px;
+  margin-left: 20px;
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+.navlist ul {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  align-items: center;
+  position: relative;
+  left: 140px;
+}
+.navlist ul li a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "Segoe UI", sans-serif;
+  color: rgb(103, 104, 105);
+  transition: ease-in-out 0.5s;
+}
+.navlist ul li a:hover {
+  color: black;
+}
+#cart-icon {
+  font-size: 2.5rem;
+  transition: 0.3s ease-out;
+  color: rgb(103, 104, 105);
+}
+#cart-icon:hover {
+  color: black;
+  font-size: 39px;
+  cursor: pointer;
+}
+.cart-etc {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+.t-products-count {
+  position: relative;
+  right: 11px;
+  bottom: 9px;
+  z-index: -1;
+  width: 20px;
+  background-color: rgb(238, 250, 0);
+  height: 20px;
+  border-radius: 40px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 900;
+  color: rgb(1, 1, 1);
+  padding: 1px;
+}
+
+/* main  */
+/* home page section  */
+.home {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+.home img {
+  width: 60%;
+  border: 1px solid rgb(232, 231, 235);
+}
+.home-text {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  padding-block: 30px;
+  font-size: 1.4rem;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: rgb(93, 94, 95);
+}
+.shop-now-btn {
+  width: 30%;
+  height: 30px;
+  border-radius: 20px;
+  border: 1px solid grey;
+  transition: 0.5s ease-out;
+  color: black;
+}
+.shop-now-btn a {
+  text-decoration: none;
+}
+.shop-now-btn:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  width: 32%;
+}
+
+.products-h2 {
+  margin-block: 60px;
+  text-align: center;
+  font-size: 1.7rem;
+  color: rgb(93, 94, 95);
+}
+
+/* cart products section  */
+.cart-products {
+  padding-block: 20px;
+  padding-inline: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  background-color: rgb(229, 234, 234);
+}
+.product-box {
+  position: relative;
+  padding: 10px;
+  width: 220px;
+  height: 250px;
+  border: 2px solid rgb(225, 221, 221);
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  border: 1px solid white;
+}
+
+.product-box:hover {
+  border: 1px solid black;
+  padding: 0;
+}
+.product-img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.product-title {
+  font-size: 0.9rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+p {
+  position: absolute;
+  left: 2px;
+  top: 230px;
+  font-size: small;
+}
+.product-price {
+  font-weight: 900;
+  font-family: "Courier New", Courier, monospace;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 10px;
+}
+.add-cart {
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 200;
+  transition: 0.2s ease-in;
+  background-color: rgb(228, 227, 227);
+  color: rgb(132, 129, 129);
+  padding: 10px;
+  border: none;
+  border-radius: 2px;
+}
+.add-cart:hover {
+  color: rgb(15, 15, 15);
+}
+
+/* side cart section  */
+.side-cart {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  z-index: 1;
+  height: 617px;
+  width: 350px;
+  position: fixed;
+  padding-inline: 20px;
+  top: 20;
+  right: 0;
+  display: none;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(185, 188, 191);
+  box-shadow: -33px -1px 49px 0px rgba(171, 168, 168, 0.46);
+}
+.side-cart-title {
+  text-align: center;
+  padding: 10px;
+}
+#cart-close {
+  position: fixed;
+  top: 20;
+  right: 0;
+  font-size: 30px;
+  cursor: pointer;
+  color: rgb(108, 106, 106);
+}
+#cart-close:hover {
+  color: rgb(0, 0, 0);
+}
+.side-cart {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  padding-inline: 20px;
+}
+.side-cart-product-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 0.5px solid black;
+  margin-bottom: 20px;
+}
+.side-cart-product-box img {
+  width: 150px;
+}
+.side-cart-div {
+  display: flex;
+  flex-direction: column;
+}
+.side-cart-product-title {
+  font-size: 15px;
+}
+
+.side-cart-product-quantity {
+  width: 40px;
+}
+.remove-cart {
+  margin: 10px;
+  font-size: 10px;
+  border: 1px solid black;
+  width: 40px;
+  height: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+}
+.remove-cart:hover {
+  cursor: pointer;
+  color: rgb(6, 6, 6);
+  background-color: red;
+  border: none;
+}
+.total {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.buy-btn {
+  display: flex;
+  justify-content: center;
+}
+.buy-btn button {
+  width: 80px;
+  height: 40px;
+  font-size: 15px;
+  border: 1px solid black;
+  border-radius: 10px;
+  transition: 0.2s ease-in-out;
+  padding-bottom: 4px;
+  align-items: center;
+}
+.buy-btn button:hover {
+  background-color: rgb(0, 114, 48);
+  border-radius: 7px;
+  cursor: pointer;
+  color: white;
+  border: none;
+}
+/* overlay css  */
+.hidden {
+  display: none;
+}
+.msg-div {
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  color: rgb(95, 93, 93);
+  font-size: 15px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: 600;
+  margin-top: 10px;
+  background: rgb(191, 190, 190);
+}
+
+/* media queries  */
+@media (max-width: 800px) {
+  .home {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+  .home img {
+    width: 100%;
+  }
+  .home-text {
+    position: relative;
+    bottom: 90px;
+    width: 100%;
+  }
+}
+@media (max-width: 532px) {
+  .nav-company-logo {
+    font-size: 0.8rem;
+    width: 50%;
+    padding-inline: 10px;
+  }
+  .side-cart {
+    width: 100%;
+  }
+  .navlist ul {
+    position: relative;
+    left: 0px;
+  }
+}
